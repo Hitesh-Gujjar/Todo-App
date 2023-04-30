@@ -9,15 +9,15 @@ function CreateTodoForm() {
     title: "",
     discription: "",
   });
-  let listId= todolist.length+1
+  let listId = todolist.length + 1;
 
-  const handleForm = (e) =>
- {   setUser({
+  const handleForm = (e) => {
+    setUser({
       ...user,
       [e.target.name]: e.target.value,
-      ["id"]:listId ,
+      ["id"]: listId,
     });
-    }
+  };
 
   return (
     <div className="">
@@ -71,8 +71,10 @@ function CreateTodoForm() {
           <button
             type="submit"
             className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-            onClick={() => {dispatch(addUSer(user))
-              setUser({});}}
+            onClick={() => {
+              dispatch(addUSer(user));
+              setUser({});
+            }}
           >
             Add Todo
           </button>
